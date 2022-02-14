@@ -1,0 +1,469 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
+
+:root{
+    background-color: var(--background);
+    --background:#EEEEEE;
+    --iconos:#FF8C00;
+    --buttons:#F1C40F;
+    --footer:#DDDDDD;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.espacio{
+    padding-top: 80px;
+}
+
+main, footer{
+    margin: 0 200px;
+    background-color: var(--background);
+}
+/*HEADER*/
+#header{
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--background);
+}
+
+#header-img{
+    width: 50vh;
+}
+
+#nav-bar{
+   width: 100vh;
+   display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link:link{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link:visited{
+    text-decoration: none;
+    color: black; 
+}
+
+.nav-link:hover{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.nav-link:active{
+    text-decoration: none;
+    color: black;
+}
+
+#hero{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+#hero form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+#email{
+    padding: .5rem 5rem; 
+}
+
+#hero h1{
+    text-transform: capitalize;
+}
+
+
+#submit{
+    display: inline;
+    font-weight: 800;
+    font-size: 1rem;
+    margin: 10px;
+    padding: 0rem .5rem;
+    background-color: var(--buttons);
+    text-transform: uppercase;
+}
+/*CARACTERISTICAS*/
+#caracteristicas{
+    margin: 80px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 80px 0;
+}
+.caracteristica{
+    display: flex;
+    align-items:center;
+    gap: 40px;
+    justify-content: space-evenly;
+}
+
+.caracteristica i{
+    font-size: 50px;
+    width: 150px;  
+    color: var(--iconos);
+}
+
+.caracteristica div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+
+/*VIDEO*/
+#video-contenedor{
+    display:flex;
+   justify-content:center;
+     
+ }
+ #video {
+     height: 80vh;
+     width: 50vw;
+ }
+/*SERVICIOS*/
+#servicios{
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+
+.cuadro_item{
+    height: 350px;
+    width: 300px;
+    border: solid black 2px;
+}
+
+.item{
+    height: 18.75rem;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.titulo_item{
+    height: 3rem;
+    width: auto;
+    background-color: var(--footer);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lista_item{
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn_item{
+    padding: 0.5rem 1rem;
+    background-color: var(--buttons);
+    border: none;
+}
+
+.btn_item:hover,  #submit:hover{
+    cursor: pointer;
+    animation-name: relleno;
+    animation-duration: 800ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes relleno{
+    100%{
+        background-color: var(--iconos);
+    }
+}
+
+
+
+/*FOOTER */
+footer{
+    background-color: var(--footer);
+    padding: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#terminos{
+    width: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.terminos_link{
+    text-decoration: none;
+    color: black;
+}
+
+.terminos_link:link{
+    text-decoration: none;
+    color: black;
+}
+
+.terminos_link:visited{
+    text-decoration: none;
+    color: black; 
+}
+
+.terminos_link:hover{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.terminos_link:active{
+    text-decoration: none;
+    color: black;
+}
+
+.copy{
+    color: gray;
+}
+
+/*MEDIAQUERYS*/
+
+@media screen and (max-width: 768px){
+    main, footer{
+        margin: 0 ;
+        background-color: var(--background);
+        font-size: 0.8rem;
+    }
+    /*HEADER*/
+    #header{
+        font-size: .8rem;
+        width: 100%;
+        padding: 20px 0;
+        position: fixed;
+        top:0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--background);
+    }
+    
+    #header-img{
+        width: 30vh;
+    }
+    
+    #nav-bar{
+       
+       display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: flex-start;
+    }
+    
+    
+    
+    #hero{
+        font-size: 0.5rem;
+        width: 50%;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+    }
+    
+    #hero form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px;
+    }
+    
+    #email{
+        padding:0; 
+    }
+    
+    #hero h1{
+        text-transform: capitalize;
+    }
+    
+    
+    #submit{
+        display: inline;
+        font-weight: 600;
+        font-size: 0.8rem;
+        margin: 10px;
+        padding: 0rem;
+        background-color: var(--buttons);
+        text-transform: uppercase;
+    }
+    /*CARACTERISTICAS*/
+    #caracteristicas{
+        width: 50%;
+        font-size: 0.5rem;
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        
+    }
+    .caracteristica{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        gap: 1rem;
+        justify-content:center;
+    }
+    
+    .caracteristica i{
+        font-size: 1.5rem;
+        color: var(--iconos);
+        display: flex;
+        justify-content: center;
+    }
+    
+    .caracteristica div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    
+    
+    /*VIDEO*/
+    #video{
+        width:50%;
+        height: auto;
+       
+    }
+    /*SERVICIOS*/
+    #servicios{
+        font-size: 0.5rem;
+        padding-right: 10px;
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        margin: 40px;
+    }
+    
+    
+    .cuadro_item{
+        height: 175px;
+        width: 150px;
+        border: solid black 1px;
+    }
+    
+    .item{
+        font-size: 0.5rem;
+        height: 10rem;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+    
+    .titulo_item{
+        height: 1.5rem;
+        width: auto;
+        background-color: var(--footer);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .lista_item{
+        line-height: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .btn_item{
+        font-size: .5rem;
+        padding: 0.2rem 0.5rem;
+        background-color: var(--buttons);
+        border: none;
+    }
+    
+    .btn_item:hover,  #submit:hover{
+        cursor: pointer;
+        animation-name: relleno;
+        animation-duration: 800ms;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes relleno{
+        100%{
+            background-color: var(--iconos);
+        }
+    }
+    
+    
+    
+    /*FOOTER */
+    footer{
+        width: 80vw;
+        font-size: 0.5rem;
+        background-color: var(--footer);
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #terminos{
+        width: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    
+}
